@@ -89,7 +89,9 @@
     </p>
     <p>
       My current interests include combinatorics/graph theory, algorithms, machine learning theory, 
-      and the design and analysis of large language models.
+      and the design and analysis of large language models based on these theories. 
+      
+      
     </p>
 
 
@@ -124,35 +126,30 @@
 
     <!-- Expository Writings -->
     <h2>Expository Writings</h2>
-    <p class="note">
-      Some informal notes and expository write-ups. These are not guaranteed to be original,
+    <p>
+      Here are some informal notes and expository write-ups. These are not guaranteed to be original,
       complete, or error-free.
     </p>
     <p>
-      Clicking the title opens a web version (if available). “pdf” links point to
-      downloadable PDF files.
+      Thanks to pandoc I was able to convert my notes in markdown and LaTeX into
+      nicely formatted HTML and PDF files.
     </p>
     <ul>
       <!-- redirect links to all my notes under the notes folder -->
       <li>
-        <a href="notes/understanding-transformers.html">Understanding Transformers</a>
-        (<a href="notes/understanding-transformers.pdf">pdf</a>)
-      </li>
-      <li>
         <a href="notes/backtracking.html">Backtracking</a>
-        (<a href="notes/backtracking.pdf">pdf</a>)
       </li>
       <li>
         <a href="notes/chapter4-5-of-understanding-transformer.html">Understanding Transformers — ch.4–5</a>
-        (<a href="notes/chapter4-5-of-understanding-transformer.pdf">pdf</a>)
       </li>
       <li>
         <a href="notes/topology-of-reasoning.html">Topology of Reasoning</a>
-        (<a href="notes/topology-of-reasoning.pdf">pdf</a>)
       </li>
       <li>
         <a href="notes/word-embeddings.html">Word Embeddings</a>
-        (<a href="notes/word-embeddings.pdf">pdf</a>)
+      </li>
+      <li>
+        <a href = "notes/regularity_lemma_notes.html">Szemerédi's Regularity Lemma</a>
       </li>
     </ul>
 
@@ -167,17 +164,10 @@
         <a href="notes/math-580.html">MATH 580 — Combinatorics</a>
         (<a href="notes/math-580.pdf">pdf</a>)
       </li>
-      <li>
-        <a href="notes/cs-374.html">CS 374 — Algorithms &amp; Models of Computation</a>
-        (<a href="notes/cs-374.pdf">pdf</a>)
-      </li>
-      <li>
-        <a href="notes/graph-theory.html">Graph Theory Notes</a>
-        (<a href="notes/graph-theory.pdf">pdf</a>)
-      </li>
+      
     </ul>
 
-    <!-- Computer "drawings" / interactive stuff -->
+    <!-- Computer "drawings" / interactive stuff
     <h2>Computer Experiments</h2>
     <p>
       Some small interactive or visual experiments, mostly excuses to play with programming
@@ -187,10 +177,10 @@
       <li><a href="demos/chip8/index.html">Chip-8 emulator in the browser</a></li>
       <li><a href="demos/random-walks/index.html">Random walks and simple Markov chains</a></li>
       <li><a href="demos/graph-visualizer/index.html">Graph visualizer</a></li>
-    </ul>
+    </ul> -->
 
     <!-- Utility tools (similar to grid paper, pdf cropping, etc.) -->
-    <h2>Tools</h2>
+    <!-- <h2>Tools</h2>
     <ul>
       <li>
         <a href="tools/grid-paper.html">Grid paper generator</a> —
@@ -204,7 +194,7 @@
         <a href="tools/latex-snippets.html">LaTeX snippet collection</a> —
         little macros and tricks I often use.
       </li>
-    </ul>
+    </ul> -->
 
     <!-- Misc -->
     <h2>Miscellaneous</h2>
@@ -222,17 +212,27 @@
 
     <!-- Privacy statement -->
     <h2>Privacy Statement</h2>
-    <p class="note">
-      You can add a brief privacy / cookie statement here if you want to mimic that structure,
-      or simply link to a separate page.
-    </p>
     <p>
-      For now: this site does not intentionally collect personal data beyond standard web
-      server logs.
+      This site is hosted on GitHub Pages and uses standard web technologies (HTML, CSS, JavaScript).
+      It does not use cookies or any third-party tracking services.
     </p>
+    
 
     <footer>
-      Last updated: <!-- TODO: update this manually --> November 2025.
+      <!-- todo: add an automatic last updated date feature -->
+      <span id="last-updated"></span>
+      <script>
+      (function(){
+        const el = document.getElementById('last-updated');
+        if (!el) return;
+        const d = new Date();
+        const opts = { year: 'numeric', month: 'long', day: 'numeric' };
+        el.textContent = d.toLocaleDateString(undefined, opts);
+        el.setAttribute('datetime', d.toISOString().slice(0,10));
+      })();
+      </script>
+    
+      
     </footer>
   </div>
 </body>
