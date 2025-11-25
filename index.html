@@ -76,9 +76,25 @@
       padding-top: 0.75rem;
     }
   </style>
+
+  <!-- MathJax: render LaTeX like $...$ and $$...$$ on this page -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+  
 </head>
 <body>
   <div class="page">
+    <h1>The site is under construction. Some links are broken.</h1>
     <h1>Youyou Wu</h1>
 
     <!-- About Me -->
@@ -137,17 +153,14 @@
     <ul>
       <!-- redirect links to all my notes under the notes folder -->
       <li>
-        <a href="notes/backtracking.html">Backtracking</a>
+        <a href="notes/understanding_transformer.html">Understanding Transformers — ch.4–5</a>
       </li>
       <li>
-        <a href="notes/chapter4-5-of-understanding-transformer.html">Understanding Transformers — ch.4–5</a>
+        <a href="notes/topology_of_reasoning.html">Topology of Reasoning</a>
       </li>
-      <li>
-        <a href="notes/topology-of-reasoning.html">Topology of Reasoning</a>
-      </li>
-      <li>
+      <!-- <li>
         <a href="notes/word-embeddings.html">Word Embeddings</a>
-      </li>
+      </li> -->
       <li>
         <a href = "notes/regularity_lemma_notes.html">Szemerédi's Regularity Lemma</a>
       </li>
@@ -162,7 +175,6 @@
     <ul>
       <li>
         <a href="notes/math-580.html">MATH 580 — Combinatorics</a>
-        (<a href="notes/math-580.pdf">pdf</a>)
       </li>
       
     </ul>
