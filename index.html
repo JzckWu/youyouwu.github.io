@@ -5,25 +5,34 @@
   <title>Youyou Wu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+
+    :root {
+  --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-heading: ui-serif, Georgia, "Times New Roman", serif;
+}
+
     /* Overall page */
     body {
       margin: 0;
       padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: var(--font-body);
       line-height: 1.6;
       background-color: #ffffff;
       color: #000000;
+      font-size: 16px;
     }
 
     /* Centered narrow column*/
     .page {
-      max-width: 800px;
+      max-width: 70ch;
+      width: min(70ch, 92vw);
       margin: 2rem auto 4rem auto;
-      padding: 0 1rem;
+      padding: 0 2rem;
     }
 
     /* Name at the top */
     h1 {
+      font-family: var(--font-heading);
       font-size: 2rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
@@ -33,15 +42,20 @@
 
     /* Section headings ("About Me", etc.) */
     h2 {
+      letter-spacing: 0.05em;
+      font-family: var(--font-heading);
+      font-weight: 700;
       font-size: 1.4rem;
       margin-top: 2rem;
       margin-bottom: 0.75rem;
       border-bottom: 1px solid #eee;
       padding-bottom: 0.25rem;
+      color: #ad0606;
     }
 
     p {
       margin: 0.4rem 0;
+      font: ;
     }
 
     ul {
@@ -94,11 +108,10 @@
 </head>
 <body>
   <div class="page">
-    <h1>The site is under construction. Some links are broken.</h1>
-    <h1>Youyou Wu</h1>
+    <h1>YOUYOU WU</h1>
 
     <!-- About Me -->
-    <h2>About Me</h2>
+    <h2>ABOUT ME</h2>
     <p>
       I am an undergraduate student at the University of Illinois at Urbana–Champaign,
       studying Mathematics and Computer Science.
@@ -106,32 +119,39 @@
     <p>
       My current interests include combinatorics/graph theory, algorithms, machine learning theory, 
       and the design and analysis of large language models based on these theories. 
-      
-      
     </p>
+    
+    
+    <p>
+      Find more details on my <a href="misc/CV.pdf">CV.</a>
+
+    </p>  
 
 
     <!-- Contact -->
-    <h2>Personal information</h2>
+    <h2>PERSONAL INFORMATION</h2>
     <p>
       Please feel free to reach me by email:
       <a href="mailto:youyou2@illinois.edu">youyou2@illinois.edu</a>.
     </p>
     <p>
       GitHub: <a href="https://github.com/JzckWu">JzckWu</a><br>
-      LinkedIn: <a href="https://www.linkedin.com/in/youyou-wu-36b386332/">youyouwu</a>
+      LinkedIn: <a href="https://www.linkedin.com/in/youyou-wu-36b386332/">youyouwu</a><br>
+      Wechat: first name + last name + 0124
+      
     </p>
+
 
 	
 
-	<h2>Blogs</h2>
+	<h2>BLOGS</h2>
 	<p>
 	  I occasionally write blog posts on various topics. You can find my blog
 	  <a href="https://jzckwu.github.io/" target="_blank">here</a>.
 	</p>  
     <!-- Example: a featured project / section like his Adams spectral sequence bit -->
-    <h2>Featured Projects</h2>
-    <!-- <p>
+    <!-- <h2>Featured Projects</h2>
+  <p>
       I am currently working on a multimodal PC assistant that integrates screen capture,
       speech, and large language models to help with everyday computing tasks.
     </p>
@@ -141,32 +161,41 @@
     </p> -->
 
     <!-- Expository Writings -->
-    <h2>Expository Writings</h2>
+    <h2>EXPOSITORY WRITINGS</h2>
     <p>
-      Here are some informal notes and expository write-ups. These are not guaranteed to be original,
-      complete, or error-free.
+      These are not guaranteed to be original,
+      complete, or error-free. However I tried my best to make them self-contained.
     </p>
-    <p>
+    <!-- <p>
       Thanks to pandoc I was able to convert my notes in markdown and LaTeX into
       nicely formatted HTML and PDF files.
-    </p>
+    </p> -->
     <ul>
       <!-- redirect links to all my notes under the notes folder -->
-      <li>
+      <!-- <li>
         <a href="notes/understanding_transformer.html">Understanding Transformers — ch.4–5</a>
-      </li>
-      <li>
+      </li> -->
+      <!-- <li>
         <a href="notes/topology_of_reasoning.html">Topology of Reasoning</a>
-      </li>
+      </li> -->
       <!-- <li>
         <a href="notes/word-embeddings.html">Word Embeddings</a>
       </li> -->
-      <li>
+      <!-- <li>
         <a href = "notes/regularity_lemma_notes.html">Szemerédi's Regularity Lemma</a>
-      </li>
-    </ul>
+      </li> -->
 
-    <!-- Course Notes -->
+      <li>
+        <a href="notes/math580_notes_new-2.pdf">MATH 580 Combinatorial Mathematics</a>
+      </li>
+
+      <li>
+        <a href="notes/DRP_Notes__Graph_Limits_and_Regularity_Lemma-4.pdf">Directed reading program on Graph Limit Theory</a>
+      </li>
+      
+    <!-- </ul> -->
+
+    <!-- Course Notes
     <h2>Course Notes</h2>
     <p>
       These are lecture notes I typed up for courses I attended. They are unofficial and
@@ -174,12 +203,12 @@
     </p>
     <ul>
       <li>
-        <a href="notes/math-580.html">MATH 580 — Combinatorics</a>
+        <a href="notes/math580_notes_new-2.pdf">MATH 580 — Combinatorics</a>
       </li>
 
       <li>
-        <a href="notes/graph_limit_theory.html">Directed reading program on Graph Limit Theory</a>
-      </li>
+        <a href="notes/DRP_Notes__Graph_Limits_and_Regularity_Lemma-4.pdf">Directed reading program on Graph Limit Theory</a>
+      </li> -->
       
     </ul>
 
@@ -215,16 +244,19 @@
     <!-- Misc -->
     <h2>Miscellaneous</h2>
     <ul>
-      <li><a href="misc/probability-facts.pdf">Random probability/combinatorics facts</a></li>
-      <li><a href="misc/reading-list.html">Reading notes and a running reading list</a></li>
-      <li><a href="misc/thoughts.html">Occasional short notes / thoughts</a></li>
+      <li>I love Citypop and fusion Jazz and rock.</li>
+      <li>I cook and eat to release pressure.</li>
+      <li>I play electric guitar and trombone and used to play both in bands.</li>
+      <!-- <li>I want to start a band but never did due to laziness.</li> -->
+      <li>I can't decide what font to use for this site.</li>
+
     </ul>
 
     <!-- Other involvements -->
-    <h2>Other Involvements</h2>
+    <!-- <h2>Other Involvements</h2>
     <p>
       I have been involved with various student groups and research projects; details coming soon.
-    </p>
+    </p> -->
 
     <!-- Privacy statement -->
     <h2>Privacy Statement</h2>
