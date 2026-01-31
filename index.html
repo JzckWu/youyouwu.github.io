@@ -55,7 +55,6 @@
 
     p {
       margin: 0.4rem 0;
-      font: ;
     }
 
     ul {
@@ -117,8 +116,8 @@
       studying Mathematics and Computer Science.
     </p>
     <p>
-      My current interests include combinatorics/graph theory, algorithms, machine learning theory, 
-      and the design and analysis of large language models based on these theories. 
+      My research interests include combinatorics/graph theory, algorithm design, and machine learning theory.
+      My current focus is on studying combinatorial objects via algorithmic approaches.
     </p>
     
     
@@ -244,6 +243,10 @@
     <!-- Misc -->
     <h2>MISCELLANEOUS</h2>
     <ul>
+      <li>I recommend anyone interested in Combinatorics to read Gower's essay <a href = "misc/2cultures.pdf">The Two Cultures of Mathematics</a>.
+        In my opinion, Combinatorics is not a field of ad hoc techniques, but is organized with deep principles that current mathematical languages are not yet capable of 
+        describing precisely.
+
       <li>I love Citypop and fusion Jazz and rock.</li>
       <li>I cook and eat to release pressure.</li>
       <li>I play electric guitar and trombone and used to play both in bands.</li>
@@ -267,20 +270,23 @@
     
 
     <footer>
-      <!-- todo: add an automatic last updated date feature -->
-      <span id="last-updated"></span>
+      Last updated: <span id="last-updated"></span>
+      
       <script>
       (function(){
         const el = document.getElementById('last-updated');
         if (!el) return;
-        const d = new Date();
-        const opts = { year: 'numeric', month: 'long', day: 'numeric' };
-        el.textContent = d.toLocaleDateString(undefined, opts);
-        el.setAttribute('datetime', d.toISOString().slice(0,10));
+        
+        // Use document.lastModified to get the file's server timestamp
+        const lastMod = new Date(document.lastModified);
+        
+        // Check if the date is valid (safety check)
+        if (!isNaN(lastMod.getTime())) {
+          const opts = { year: 'numeric', month: 'long', day: 'numeric' };
+          el.textContent = lastMod.toLocaleDateString(undefined, opts);
+        } 
       })();
       </script>
-    
-      
     </footer>
   </div>
 </body>
